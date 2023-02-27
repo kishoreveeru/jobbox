@@ -1,0 +1,320 @@
+
+    <main class="main">
+      <section class="section-box mt-80">
+        <div class="section-box wow animate__animated animate__fadeIn">
+          <div class="container">
+            <div class="text-center">
+              <h2 class="section-title mb-10 wow animate__animated animate__fadeInUp">Browse by category</h2>
+              <p class="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the job that&rsquo;s perfect for you. Work with the best companies.</p>
+            </div>
+            <div class="box-swiper mt-50">
+              <ngx-light-carousel [options]="options1" [data]="products" class="wrapper c-accent"
+	style="display: block;">
+	<section ngx-light-carousel-container class="content">
+		<article ngx-light-carousel-item *ngFor="let product of products; let i = index">
+			<!-- <div class="item cursor-pointer">
+				<div class="product">
+					<a href="{{product.url}}">
+						<img  src="{{product.image}}"  style="width:90px">
+          </a>
+						<div class="text-left mt-2">
+							<h3 class="title mb-1">{{product.title}}</h3>
+							<div class="pricing d-flex">
+								<span class="sale-price text-danger ml-2"
+                *ngIf="product.salePrice">{{product.salePrice | currency}}</span>
+								<span class="original-price"
+                [ngClass]="{'on-sale ml-1': product.salePrice}">{{product.regularPrice | currency}}</span>
+							</div>
+						</div>
+				</div>
+			</div> -->
+      <div class="swiper-slide hover-up"><a href="{{product.url}}">
+        <div class="item-logo">
+          <div class="image-left"><img alt="jobBox" src="{{product.image}}" ></div>
+          <div class="text-info-right">
+            <h4>{{product.title}}</h4>
+            {{product.regularPrice}} Jobs Available
+          </div>
+        </div>
+      </a>
+      </div>
+
+      
+		</article>
+		<ng-template #infiniteContainer></ng-template>
+	</section>
+
+	<ng-template #carouselContent let-product let-i="index">
+		<article>
+			<!-- <div class="item cursor-pointer">
+				<div class="product">
+					<a href="{{product.url}}">
+						<img class="w-100" src="{{product.image}}">
+          </a>
+						<div class="text-left mt-2">
+							<h3 class="title mb-1">{{product.title}}</h3>
+							<div class="pricing d-flex">
+								<span class="sale-price text-danger ml-2"
+                *ngIf="product.salePrice">{{product.salePrice | currency}}</span>
+								<span class="original-price"
+                [ngClass]="{'on-sale ml-1': product.salePrice}">{{product.regularPrice | currency}}</span>
+							</div>
+						</div>
+				</div>
+			</div> -->
+
+      <div class="swiper-slide hover-up"><a href="{{product.url}}">
+        <div class="item-logo">
+          <div class="image-left"><img alt="jobBox" src="{{product.image}}" ></div>
+          <div class="text-info-right">
+            <h4>{{product.title}}</h4>
+            {{product.regularPrice}} Jobs Available
+          </div>
+        </div>
+      </a>
+      </div>
+		</article>
+	</ng-template>
+
+	<ng-template #carouselPrev>
+		<div class="click-area">
+		</div>
+	</ng-template>
+	<ng-template #carouselNext>
+		<div class="click-area">
+		</div>
+	</ng-template>
+
+	<ng-template #carouselDot let-model>
+		<div class="ball bg-accent"></div>
+	</ng-template>
+
+ 
+
+
+</ngx-light-carousel>
+              <!-- <div class="swiper-container swiper-group-5 swiper">
+                <div class="swiper-wrapper pb-70 pt-5">
+                  <div class="swiper-slide hover-up"><a href="jobs-list.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg" width="100px"></div>
+                        <div class="text-info-right">
+                          <h4>Marketing &amp; Sale</h4>
+                          <p class="font-xs">1526<span> Jobs Available</span></p>
+                        </div>
+                      </div></a><a href="jobs.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Customer Help</h4>
+                          <p class="font-xs">185<span> Jobs Available</span></p>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide hover-up"><a href="jobs-list.html">
+                    <div class="item-logo">
+                      <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+                      <div class="text-info-right">
+                        <h4>Marketing &amp; Sale</h4>
+                        <p class="font-xs">1526<span> Jobs Available</span></p>
+                      </div>
+                    </div></a><a href="jobs.html">
+                    <div class="item-logo">
+                      <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+                      <div class="text-info-right">
+                        <h4>Customer Help</h4>
+                        <p class="font-xs">185<span> Jobs Available</span></p>
+                      </div>
+                    </div></a>
+                </div>
+                <div class="swiper-slide hover-up"><a href="jobs-list.html">
+                  <div class="item-logo">
+                    <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+                    <div class="text-info-right">
+                      <h4>Marketing &amp; Sale</h4>
+                      <p class="font-xs">1526<span> Jobs Available</span></p>
+                    </div>
+                  </div></a><a href="jobs.html">
+                  <div class="item-logo">
+                    <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+                    <div class="text-info-right">
+                      <h4>Customer Help</h4>
+                      <p class="font-xs">185<span> Jobs Available</span></p>
+                    </div>
+                  </div></a>
+              </div>
+              <div class="swiper-slide hover-up"><a href="jobs-list.html">
+                <div class="item-logo">
+                  <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+                  <div class="text-info-right">
+                    <h4>Marketing &amp; Sale</h4>
+                    <p class="font-xs">1526<span> Jobs Available</span></p>
+                  </div>
+                </div>
+              </a>
+              <a href="jobs.html">
+                <div class="item-logo">
+                  <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+                  <div class="text-info-right">
+                    <h4>Customer Help</h4>
+                    <p class="font-xs">185<span> Jobs Available</span></p>
+                  </div>
+                </div></a>
+            </div>
+            <div class="swiper-slide hover-up"><a href="jobs-list.html">
+              <div class="item-logo">
+                <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+                <div class="text-info-right">
+                  <h4>Marketing &amp; Sale</h4>
+                  <p class="font-xs">1526<span> Jobs Available</span></p>
+                </div>
+              </div></a><a href="jobs.html">
+              <div class="item-logo">
+                <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+                <div class="text-info-right">
+                  <h4>Customer Help</h4>
+                  <p class="font-xs">185<span> Jobs Available</span></p>
+                </div>
+              </div></a>
+          </div>
+          <div class="swiper-slide hover-up"><a href="jobs-list.html">
+            <div class="item-logo">
+              <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+              <div class="text-info-right">
+                <h4>Marketing &amp; Sale</h4>
+                <p class="font-xs">1526<span> Jobs Available</span></p>
+              </div>
+            </div></a><a href="jobs.html">
+            <div class="item-logo">
+              <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+              <div class="text-info-right">
+                <h4>Customer Help</h4>
+                <p class="font-xs">185<span> Jobs Available</span></p>
+              </div>
+            </div></a>
+        </div>
+        <div class="swiper-slide hover-up"><a href="jobs-list.html">
+          <div class="item-logo">
+            <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+            <div class="text-info-right">
+              <h4>Marketing &amp; Sale</h4>
+              <p class="font-xs">1526<span> Jobs Available</span></p>
+            </div>
+          </div></a><a href="jobs.html">
+          <div class="item-logo">
+            <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+            <div class="text-info-right">
+              <h4>Customer Help</h4>
+              <p class="font-xs">185<span> Jobs Available</span></p>
+            </div>
+          </div></a>
+      </div>
+      <div class="swiper-slide hover-up"><a href="jobs-list.html">
+        <div class="item-logo">
+          <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+          <div class="text-info-right">
+            <h4>Marketing &amp; Sale</h4>
+            <p class="font-xs">1526<span> Jobs Available</span></p>
+          </div>
+        </div></a><a href="jobs.html">
+        <div class="item-logo">
+          <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+          <div class="text-info-right">
+            <h4>Customer Help</h4>
+            <p class="font-xs">185<span> Jobs Available</span></p>
+          </div>
+        </div></a>
+    </div>
+    
+                  <div class="swiper-slide hover-up"><a href="jobs.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/finance.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Finance</h4>
+                          <p class="font-xs">168<span> Jobs Available</span></p>
+                        </div>
+                      </div></a><a href="jobs-list.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/lightning.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Software</h4>
+                          <p class="font-xs">1856<span> Jobs Available</span></p>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide hover-up"><a href="jobs.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/human.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Human Resource</h4>
+                          <p class="font-xs">165<span> Jobs Available</span></p>
+                        </div>
+                      </div></a><a href="jobs.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/management.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Management</h4>
+                          <p class="font-xs">965<span> Jobs Available</span></p>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide hover-up"><a href="jobs-list.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/retail.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Retail &amp; Products</h4>
+                          <p class="font-xs">563<span> Jobs Available</span></p>
+                        </div>
+                      </div></a><a href="jobs.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/security.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Security Analyst</h4>
+                          <p class="font-xs">254<span> Jobs Available</span></p>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide hover-up"><a href="jobs.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/content.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Content Writer</h4>
+                          <p class="font-xs">142<span> Jobs Available</span></p>
+                        </div>
+                      </div></a><a href="jobs-list.html">
+                      <div class="item-logo">
+                        <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/research.svg"></div>
+                        <div class="text-info-right">
+                          <h4>Market Research</h4>
+                          <p class="font-xs">532<span> Jobs Available</span></p>
+                        </div>
+                      </div></a>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- <div class="swiper-wrapper pb-70 pt-5">
+      <div class="swiper-slide hover-up"><a href="jobs-list.html">
+          <div class="item-logo">
+            <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/marketing.svg"></div>
+            <div class="text-info-right">
+              <h4>Marketing &amp; Sale</h4>
+              <p class="font-xs">1526<span> Jobs Available</span></p>
+            </div>
+          </div></a><a href="jobs.html">
+          <div class="item-logo">
+            <div class="image-left"><img alt="jobBox" src="assets/imgs/page/homepage1/customer.svg"></div>
+            <div class="text-info-right">
+              <h4>Customer Help</h4>
+              <p class="font-xs">185<span> Jobs Available</span></p>
+            </div>
+          </div></a>
+      </div> -->
+   

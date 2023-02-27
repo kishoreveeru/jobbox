@@ -1,0 +1,26 @@
+    <header class="header sticky-bar">
+        <div class="container">
+          <div class="main-header">
+            <div class="header-left">
+              <div class="header-logo" ><a class="d-flex" href="index.html"><img alt="jobBox" src="assets/imgs/template/jobhub-logo.svg"></a></div>
+            </div>
+            <div class="header-nav">
+              <nav class="nav-main-menu">
+                <ul class="main-menu">
+                  <li class="has-children"><a class="active" href="index.html">Home</a></li>
+                  <li class="has-children"><a routerLink="/jobs" routerLinkActive="active" ariaCurrentWhenActive="page">Find a Job</a></li>
+                  <li class="has-children"><a href="companies.html">Companies</a></li>
+                </ul>
+              </nav>
+              <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
+            </div>
+            <div class="header-right" *ngIf="showControls">
+              <div class="block-signin"><a class="text-link-bd-btom hover-up" href="register">Register</a><a class="btn btn-default btn-shadow ml-40 hover-up" href="login">Sign in</a></div>
+            </div>
+            <div class="header-right" *ngIf="!showControls">
+              <div class="block-signin"><a class="text-link-bd-btom hover-up" (click)="logOut()">Signout</a></div>
+            </div>
+          </div>
+        </div>
+        </header>
+   

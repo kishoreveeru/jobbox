@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+$transition_time: 0.2s;
+.carousel {
+    color: white;
+    .content {
+      display: flex;
+   
+      .item {
+        width: 100%;
+        display: block;
+
+        transition: opacity 0.295s linear $transition_time;
+   
+        &.visible {
+          opacity: 1;
+        }
+   
+        .img {
+          width: 100%;
+          height: 400px;
+          display: block;
+        //   background-size: cover;
+        //   background-position: center;
+        }
+      }
+    }
+   
+    .ball {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: black;
+      border: 2px solid;
+      opacity: 0.5;
+   
+      &.visible {
+        opacity: 1;
+      }
+    }
+   
+    .click-area {
+      width: 50px;
+      text-align: center;
+   
+      i {
+        font-size: 3em;
+      }
+    }
+  }
+
+  .content article img{
+    min-width: 50px !important;
+    width: 50px !important;
+    float: left;
+  }
+h4{
+  font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 3px;
+}
+.swiper-slide{
+    a{
+        width: 100%;
+    }
+    border: 1px solid rgba(6, 18, 36, 0.1);
+    padding: 6px 18px;
+    display: flex;
+    width: calc(100% - 20px) !important;
+    text-align: left;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    min-width: 255px !important;
+    height: 75px;
+}
+.text-info-right, .item-logo{
+    width: 100%;
+}
+.direction.right{
+    background: url("../../assets/imgs/slider/swiper/next.svg") no-repeat 0px 0px !important;
+}
+.direction.left{
+    background: url("../../assets/imgs/slider/swiper/prev.svg") no-repeat 0px 0px !important;
+}
+.wrapper{
+    overflow: visible !important;
+}
